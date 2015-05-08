@@ -45,8 +45,8 @@ apt-get update
 
 # Copy X app start script to right location
 COPY startapp.sh /startapp.sh
-ADD firstrun.sh /etc/my_init.d/firstrun.sh
-ADD /src/jd2.tar /nobody/jd2.tar
+COPY firstrun.sh /etc/my_init.d/firstrun.sh
+COPY /src/jd2.tar /nobody/jd2.tar
 RUN chmod +x /etc/my_init.d/firstrun.sh 
 
 
