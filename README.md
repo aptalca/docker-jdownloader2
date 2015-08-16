@@ -18,6 +18,7 @@ docker run -d --name="JDownloader2" -e HEIGHT="720" -e WIDTH="1280" -v /path/to/
 - Replace "/path/to/config" with your choice of folder location. That is where all of your configuration and library files will reside, so you won't lose data when you update, reinstall, etc.
 - Replace "XXXX" with your choice of port.
 - You can change the screen resolution by modifying the WIDTH and HEIGHT variables.
+- Ctrl-Alt-Shft will bring up the menu that allows changing input options
 
 To access the GUI, point your web browser to http://SERVERIP:PORT/#/client/c/JDownloader2 (Replace SERVERIP and PORT with your values)
 
