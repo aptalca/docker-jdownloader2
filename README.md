@@ -28,9 +28,9 @@ JDownloader 2 also has a webserver accessible through my.jdownloader.org
 - 2016-01-08 - Fixed permissions for downloaded files. Should work better for samba shares.
 
 
-#### Note:
+##### Note:
 Some platforms like Debian are having issues with setting timezones. If you get the following error:
-`mv: cannot move '/etc/localtime.dpkg-new' to '/etc/localtime': Device or resource busy  
+`mv: cannot move '/etc/localtime.dpkg-new' to '/etc/localtime': Device or resource busy
 *** /etc/my_init.d/00_config.sh failed with status 1` and the container stops, remove the following from your run command: `-v /etc/localtime:/etc/localtime:ro` and replace it with the following: `-e TZ="America/New_York"`
 
 You can change the timezone to yours according to the list here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
