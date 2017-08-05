@@ -34,7 +34,8 @@ mkdir -p /etc/my_init.d && \
 # Install packages needed for app
 export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive && \
 apt-get update && \
-apt-get install -y firefox
+apt-get install -y firefox && \
+apt-get install -y python-xdg
 
 
 #########################################
@@ -47,8 +48,8 @@ apt-get install -y firefox
 # Copy X app start script to right location
 COPY startapp.sh /startapp.sh
 COPY firstrun.sh /etc/my_init.d/firstrun.sh
-COPY /src/jd2.tar /nobody/jd2.tar
-RUN chmod +x /etc/my_init.d/firstrun.sh 
+COPY /src/jd2.tar.gz /nobody/jd2.tar.gz
+RUN chmod +x /etc/my_init.d/firstrun.sh
 
 
 
@@ -58,4 +59,5 @@ RUN chmod +x /etc/my_init.d/firstrun.sh
 
 # Place whater volumes and ports you want exposed here:
 VOLUME ["/config"]
+VOLUME ["/downloads"]
 EXPOSE 3389 8080
