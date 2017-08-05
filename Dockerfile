@@ -48,7 +48,7 @@ apt-get install -y python-xdg
 # Copy X app start script to right location
 COPY startapp.sh /startapp.sh
 COPY firstrun.sh /etc/my_init.d/firstrun.sh
-COPY /src/jd2.tar /nobody/jd2.tar
+COPY /src/jd2.tar.gz /nobody/jd2.tar.gz
 RUN chmod +x /etc/my_init.d/firstrun.sh
 
 
