@@ -34,7 +34,8 @@ mkdir -p /etc/my_init.d && \
 # Install packages needed for app
 export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive && \
 apt-get update && \
-apt-get install -y firefox
+apt-get install -y firefox && \
+apt-get install -y python-xdg
 
 
 #########################################
